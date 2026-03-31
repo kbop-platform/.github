@@ -176,9 +176,8 @@ npx prettier --write .
 
 처음 합류했다면 아래 순서대로 진행해주세요.
 
-- [ ] GitHub `kbop-platform` org 초대 요청 (팀장)
-- [ ] Slack 워크스페이스 초대 요청 (팀장)
-- [ ] NAS 드라이브 접근 권한 요청 (팀장)
+- [ ] GitHub `kbop-platform` org 초대  
+- [ ] Slack 워크스페이스 초대 
 - [ ] Antigravity IDE 설치
 - [ ] Git 설정
 ```bash
