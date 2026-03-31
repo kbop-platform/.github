@@ -1,6 +1,6 @@
 # KBOP Platform Dev Guidelines
 
-코드 스타일, 브랜치 전략, PR 규칙 등 팀의 개발 기준을 정리한 문서입니다.
+원활한 협업을 위해 이 문서를 작성했습니다.
 문서를 수정하고 싶으면 PR을 올려주세요.
 
 ---
@@ -18,25 +18,26 @@
 | 서버 상태 | TanStack Query |
 | 폼 | React Hook Form + Zod |
 | UI 컴포넌트 | Radix UI |
-| IDE | Antigravity |
+| IDE | VSCode |
 
 ### 백엔드 (Python)
 | 항목 | 기술 |
 |------|------|
 | 언어 | Python 3.11 |
-| IDE | Antigravity |
+| IDE | VSCode |
 
 ### 백엔드 (Java) - 도입 예정
 | 항목 | 기술 |
 |------|------|
-| 언어 | Java |
-| 프레임워크 | Spring Boot |
-| IDE | Antigravity |
+| 언어 | Java 25 LTS |
+| 프레임워크 | Spring Boot 4.0.x |
+| IDE | IntelliJ IDEA Ultimate |
 
 ### 인프라
 | 항목 | 기술 |
 |------|------|
 | 클라우드 | 네이버 클라우드 |
+| 클라우드 | AWS |
 | DB | MSSQL |
 
 ---
@@ -73,7 +74,7 @@ main
 
 - 소문자만 사용
 - 단어 구분은 하이픈(-) 사용
-- 설명은 간결하게 (30자 이내 권장)
+- 설명은 30자 이내 권장
 
 ### 예시
 ```
@@ -88,9 +89,6 @@ hotfix/prod-auth-timeout
 ---
 
 ## 커밋 규칙
-
-커밋 메시지는 아래 형식을 따릅니다.
-히스토리만 봐도 무슨 작업인지 파악할 수 있도록 작성해주세요.
 ```
 {타입}: {설명}
 ```
@@ -109,11 +107,8 @@ hotfix/prod-auth-timeout
 ### 예시
 ```
 feat: 플레이어 통계 API 추가
-feat: TrackMan 데이터 수집 기능 추가
 fix: 플레이어 ID null 처리 오류 수정
-fix: 로그인 토큰 만료 오류 수정
 chore: ruff 0.4.1 업데이트
-chore: prettier 설정 추가
 style: ruff 포맷 적용
 ```
 
@@ -145,8 +140,6 @@ PR은 한 가지 목적만 담는 것을 원칙으로 합니다.
 - 최대 줄 길이: 100자
 
 설정 파일: [pyproject.toml](./pyproject.toml)
-
-수동 실행:
 ```bash
 ruff format .
 ruff check . --fix
@@ -159,8 +152,6 @@ ruff check . --fix
 - 따옴표: single quote
 
 설정 파일: [.prettierrc](./.prettierrc)
-
-수동 실행:
 ```bash
 npx prettier --write .
 ```
@@ -174,11 +165,10 @@ npx prettier --write .
 
 ## 온보딩 체크리스트
 
-처음 합류했다면 아래 순서대로 진행해주세요.
-
-- [ ] GitHub `kbop-platform` org 초대  
+- [ ] GitHub `kbop-platform` org 초대
 - [ ] Slack 워크스페이스 초대 
-- [ ] Antigravity IDE 설치
+- [ ] NAS 드라이브 접근 설정
+- [ ] IDE 설치
 - [ ] Git 설정
 ```bash
 git config --global user.name "본인 이름"
@@ -187,4 +177,4 @@ git config --global user.email "회사 이메일"
 
 - [ ] SSH 키 등록: https://github.com/settings/keys
 - [ ] 코드 스타일 설정 파일 적용 (.prettierrc, pyproject.toml)
-- [ ] 첫 PR 올려보기
+- [ ] 첫 PR 올리기
